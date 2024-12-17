@@ -1175,6 +1175,13 @@
         },
         "optional": true
       },
+      "cv_link": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "ogImage": {
         "type": "objectAttribute",
         "value": {
