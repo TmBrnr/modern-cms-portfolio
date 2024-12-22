@@ -15,8 +15,8 @@ export default {
           background: "#ECE6FF",
         },
         light: {
-          primary: "#f9382f",
-          background: "#FCB4B0",
+          primary: "#33383C",
+          background: "#FFFFFF",
         },
       },
     },

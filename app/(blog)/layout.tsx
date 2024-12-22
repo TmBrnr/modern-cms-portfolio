@@ -16,8 +16,8 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
-import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 import { ThemeProvider } from "next-themes";
+import Header from "@/app/components/Header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch({
@@ -70,12 +70,7 @@ export default async function RootLayout({
       <body className="bg-light-background text-light-primary dark:bg-dark-background dark:text-dark-primary">
         <ThemeProvider attribute="class">
           <section className="min-h-screen">
-            <header className="sticky top-0 z-50 w-full">
-              <div className="container mx-auto px-5 py-4 flex justify-between items-center">
-                <h1 className="text-2xl font-bold">Your Blog</h1>
-                <ThemeSwitcher />
-              </div>
-            </header>
+            <Header />
             {isDraftMode && <AlertBanner />}
             <main>{children}</main>
             <footer className="flex flex-col items-center">

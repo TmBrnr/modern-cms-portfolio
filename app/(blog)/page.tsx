@@ -13,6 +13,8 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { heroQuery, settingsQuery } from "@/sanity/lib/queries";
 
+import Hero from "@/app/components/Hero";
+
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
   const description = props.description?.length
@@ -83,6 +85,7 @@ export default async function Page() {
 
   return (
     <div className="container mx-auto px-5">
+      <Hero />
       <Intro title={settings?.title} description={settings?.description} />
       {heroPost ? (
         <HeroPost
